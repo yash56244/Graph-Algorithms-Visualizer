@@ -110,9 +110,9 @@ this.onmessage = (e) => {
         let cost = 0;
         for (li of line_li_temp) {
             if (display) {
-                updateNode(idToIndex(li.startNodeId), "orange");
+                updateNode(li.startNodeId, "orange");
                 sleep(sleepTime);
-                updateNode(idToIndex(li.endNodeId), "orange");
+                updateNode(li.endNodeId, "orange");
                 sleep(sleepTime);
                 updateLineByStartEnd(li.startNodeId, li.endNodeId, "orange");
                 sleep(sleepTime);
@@ -123,9 +123,9 @@ this.onmessage = (e) => {
                 union_sets(li.startNodeId, li.endNodeId);
             }
             if (display) {
-                updateNode(idToIndex(li.startNodeId), "#397EC9");
+                updateNode(li.startNodeId, "#397EC9");
                 sleep(sleepTime);
-                updateNode(idToIndex(li.endNodeId), "#397EC9");
+                updateNode(li.endNodeId, "#397EC9");
                 sleep(sleepTime);
                 updateLineByStartEnd(li.startNodeId, li.endNodeId, "white");
                 sleep(sleepTime);
